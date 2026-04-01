@@ -1,5 +1,4 @@
-# Mnet
-# UniCure: A Multi-Modal Model for Predicting Personalized Cancer Therapy Response 💊
+# Mnet：an unsupervised multi-network driven drug discovery framework 💊
 
 ## Overview 🌟
 **UniCure is a multi-modal model integrating omics (UCE) and chemical (Uni-mol) foundation models to predict transcriptomic drug responses across diverse cellular contexts.**
