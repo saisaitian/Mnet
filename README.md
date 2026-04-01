@@ -35,8 +35,6 @@ Description: Mnet integrates network proximity, functional similarity, and netwo
 **Environment Manager:** Miniconda/Mamba  
 R studio 4.1.1 R version 4.1.1 (2021-08-10)
 
-Docker version:24.0.6
-
 Platform: x86_64-pc-linux-gnu (64-bit)
 
 Running under: Ubuntu 20.04.6 LTS
