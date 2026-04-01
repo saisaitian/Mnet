@@ -207,6 +207,7 @@ GO_all_MF <- unique(unlist(Node2GO_MF))
 
 GO_all_CC <- unique(unlist(Node2GO_CC))
 
+tnbc_gene_entrez <- import('TNBC_driver.csv')
 
 DiseaseModules <- list(tnbc_gene_entrez$ENTREZID)
 
@@ -241,6 +242,10 @@ GO_pairwise_BP <- GO_pairwise_BP[[1]]
 GO_pairwise_MF <- GO_pairwise_MF[[1]]
 GO_pairwise_CC <- GO_pairwise_CC[[1]]
 ###  Calculate the GO similarity
+
+DTI <- import('TCM ingredient2targets.csv')
+
+tcm_targets <- with(DTI, split(Targets, Pubchem_CID))
 
 
 ResGOsim <- vector("list", length(tcm_targets))
