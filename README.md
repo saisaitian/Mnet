@@ -1,13 +1,7 @@
 # Mnet：an unsupervised multi-network driven drug discovery computational framework 💊
 
-## Overview 🌟
-**UniCure is a multi-modal model integrating omics (UCE) and chemical (Uni-mol) foundation models to predict transcriptomic drug responses across diverse cellular contexts.**
-
-💡 **Key Innovations**  
-- **FlexPert**: Sliding-window cross-attention for flexible drug-cell interaction modeling  
-- **LoRA-PEFT**: Parameter-efficient tuning preserving pretrained knowledge  
-- **MMD loss**: Handles unpaired perturbation data without cell matching    
-- **Staged training**: Enhancing computational efficiency and functional modularity
+## These files are the key script for the GSFM Code used for the analysis of the paper:🌟
+**A network medicine framework identifies Dihydroisotanshinone I as a SKP2-targeting anti-tumor agent for triple-negative breast cancer**
 
 ## System Requirements 🛠
 
