@@ -25,8 +25,6 @@ Description: Calculation of the four biologically interpretable quantifiers (BIQ
       NP: Network proximity analysis for drug discovery
       FS: Functional Similarity analysis for drug discovery
       ND: RWR-based network diffusion analysis for drug discovery
-```
-
 
 ## System Requirements 🛠
 
