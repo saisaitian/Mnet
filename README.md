@@ -19,10 +19,11 @@ Description: Evaluation the modular organization of TNBC driver genes within the
      Code：TNBC_Driver_Analysis.R
      
 # STEP3 Mnet-based drug discovery 
-Description: Mnet integrates network proximity, functional similarity, and network diffusion to evaluate topological proximity, functional coherence, and diffusion-based connectivity between the targets of TCM-derived compounds and the TNBC driver gene module, respectively.                                                                                  
-      NP: Network proximity analysis for drug discovery
-      FS: Functional Similarity analysis for drug discovery
-      ND: RWR-based network diffusion analysis for drug discovery
+Description: Mnet integrates network proximity, functional similarity, and network diffusion to evaluate topological proximity, functional coherence, and diffusion-based connectivity between the targets of TCM-derived compounds and the TNBC driver gene module, respectively.  
+    Code：
+    NP: Network proximity analysis for drug discovery
+    FS: Functional Similarity analysis for drug discovery
+    ND: RWR-based network diffusion analysis for drug discovery
 
 ## System Requirements 🛠
 
