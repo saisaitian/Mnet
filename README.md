@@ -5,25 +5,43 @@
 Saisai Tian, Jinyuan Lu, Chengyang Guo, Wenjing Gu, Pengli Huang, Xike Xu, Qun Wang, Weidong Zhang
 ## System Requirements 🛠
 
-### Hardware Requirements
-| Use Case              | Minimum Configuration                | Recommended Configuration       |
-|-----------------------|--------------------------------------|---------------------------------|
-| **Full Reproduction** | 4× NVIDIA GPUs (80GB VRAM each) | 8× A100/H100 80GB |
-| **Testing/Inference** | 1× NVIDIA GPU (32GB+ VRAM) | 1× NVIDIA GPU (80GB VRAM) |
-
 ### Software Requirements
 **OS:** Linux (Ubuntu 22.04 LTS or Rocky Linux 8.6+ recommended)  
 **Environment Manager:** Miniconda/Mamba  
 
-#### Installation via Conda:
-```
-# Base environment (minimal)
-conda env create -f environment.yml
+# STEP 1 Data processing
+Description: Process data from TCGA and LINCS databases,and further measured the correlation between each sample and cell line, and removed samples that are not correlated to the cell lines.
+## input 
+     Cancer Gene Expression Matrix
+     Drug-induced Gene Expression Matrix
+     CCLE data
+     
+# STEP 2 Data transformation
+Description: Calculation of the four biologically interpretable quantifiers (BIQs): GSFM_Up, GSFM_Down, GSFM_ssGSEA, and GSFM_TF.
+## input
+     Processing Cancer Gene Expression Matrix (step1)
+     Processing Drug-induced Gene Expression Matrix (step1)
+     Hallmark genesets
+     Database:TF-target pairs by Garcia-Alonso et al.
+## Build docker
+     cd 2.data transformation/docker
+     docker build --tag gsfm-script:latest --file GSFM.dockerfile .
+     cd ..
+     docker run -it -d  --restart=always --name GSFM-notebook   -p 12101:8888 --log-opt max-size=10m --log-opt max-file=5 -v `pwd`/project:/project   gsfm-script
+     docker container exec -it GSFM-notebook bash
+     jupyter-notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
+     run ./project/Notebooks BRCA_GSFM.ipynb
 
-# Full environment (with development tools)
-conda env create -f environment_full.yml
-```
-
+# STEP 3 Drug discovery
+Description: Calculation of RS-GSFM, RS-Gene, RS-Viper                                                                                 
+ step3.1:Calculation of RS-GSFM                                
+ step3.2:Calculation of RS-Gene                                      
+ step3.3:Calculation of RS-Viper                              
+## input
+     Processing Cancer Gene Expression Matrix (step1)
+     Processing Drug-induced Gene Expression Matrix (step1) 
+     Processing Cancer GSFM Active Matrix (step2)
+     Processing Drug-induced GSFM Active Matrix  (step2)
 #### Manual Installation Steps (Recommended):
 ```
 1. Install Python 3.10
