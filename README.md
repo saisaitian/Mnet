@@ -7,17 +7,16 @@ Saisai Tian, Jinyuan Lu, Chengyang Guo, Wenjing Gu, Pengli Huang, Xike Xu, Qun W
 ## System Requirements 🛠
 
 ### Software Requirements
-**OS:** Linux (Ubuntu 22.04 LTS)  
+**OS:** Linux (Ubuntu 20.04.6 LTS)  
 **Environment Manager:** Miniconda/Mamba  
 
-# STEP 1 Data processing
-Description: Process data from TCGA and LINCS databases,and further measured the correlation between each sample and cell line, and removed samples that are not correlated to the cell lines.
+# STEP1 Data processing
+Description: Processed data of TCM-derived compound-target network and  TNBC-driven genes.
 ## input 
-     Cancer Gene Expression Matrix
-     Drug-induced Gene Expression Matrix
-     CCLE data
+      TNBC-driven genes 
+      TCM-derived compound-target network
      
-# STEP 2 Data transformation
+# STEP2 TNBC-driven gene network module analysis
 Description: Calculation of the four biologically interpretable quantifiers (BIQs): GSFM_Up, GSFM_Down, GSFM_ssGSEA, and GSFM_TF.
 ## input
      Processing Cancer Gene Expression Matrix (step1)
@@ -25,8 +24,8 @@ Description: Calculation of the four biologically interpretable quantifiers (BIQ
      Hallmark genesets
      Database:TF-target pairs by Garcia-Alonso et al.
      
-# STEP 3 Drug discovery
-Description: Calculation of RS-GSFM, RS-Gene, RS-Viper                                                                                 
+# STEP3 Mnet-based drug discovery 
+Description: Calculation of NP, FS, ND                                                                                 
 NP: Network proximity analysis for drug discovery
 FS: Functional Similarity analysis for drug discovery
 RWR: RWR-based network diffusion analysis for drug discovery
