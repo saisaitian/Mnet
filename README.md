@@ -4,11 +4,7 @@
 **A network medicine framework identifies Dihydroisotanshinone I as a SKP2-targeting anti-tumor agent for triple-negative breast cancer**
 
 Saisai Tian, Jinyuan Lu, Chengyang Guo, Wenjing Gu, Pengli Huang, Xike Xu, Qun Wang, Weidong Zhang
-## System Requirements 🛠
 
-### Software Requirements
-**OS:** Linux (Ubuntu 20.04.6 LTS)  
-**Environment Manager:** Miniconda/Mamba  
 
 # STEP1 Data processing
 Description: Processed data of TCM-derived compound-target network and  TNBC-driven genes.
@@ -25,15 +21,18 @@ Description: Calculation of the four biologically interpretable quantifiers (BIQ
      Database:TF-target pairs by Garcia-Alonso et al.
      
 # STEP3 Mnet-based drug discovery 
-Description: Calculation of NP, FS, ND                                                                                 
-NP: Network proximity analysis for drug discovery
-FS: Functional Similarity analysis for drug discovery
-ND: RWR-based network diffusion analysis for drug discovery
+      Description: Calculation of NP, FS, ND                                                                                 
+      NP: Network proximity analysis for drug discovery
+      FS: Functional Similarity analysis for drug discovery
+      ND: RWR-based network diffusion analysis for drug discovery
 ```
 
 
+## System Requirements 🛠
 
-# System requirement
+### Software Requirements
+**OS:** Linux (Ubuntu 20.04.6 LTS)  
+**Environment Manager:** Miniconda/Mamba  
 R studio 4.1.1 R version 4.1.1 (2021-08-10)
 
 Docker version:24.0.6
