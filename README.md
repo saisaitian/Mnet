@@ -13,15 +13,13 @@ Description: Processed data of TCM-derived compound-target network and  TNBC-dri
       TCM-derived compound-target network
      
 # STEP2 TNBC-driven gene network module analysis
-Description: Calculation of the four biologically interpretable quantifiers (BIQs): GSFM_Up, GSFM_Down, GSFM_ssGSEA, and GSFM_TF.
+Description: Evaluation the modular organization of TNBC driver genes within the human interactome.
 ## input
-     Processing Cancer Gene Expression Matrix (step1)
-     Processing Drug-induced Gene Expression Matrix (step1)
-     Hallmark genesets
-     Database:TF-target pairs by Garcia-Alonso et al.
+     Files：TNBC-driven genes (step1)
+     Code：TNBC_Driver_Analysis.R
      
 # STEP3 Mnet-based drug discovery 
-      Description: Calculation of NP, FS, ND                                                                                 
+Description: Mnet integrates network proximity, functional similarity, and network diffusion to evaluate topological proximity, functional coherence, and diffusion-based connectivity between the targets of TCM-derived compounds and the TNBC driver gene module, respectively.                                                                                  
       NP: Network proximity analysis for drug discovery
       FS: Functional Similarity analysis for drug discovery
       ND: RWR-based network diffusion analysis for drug discovery
