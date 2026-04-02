@@ -6,7 +6,7 @@
 Saisai Tian, Jinyuan Lu, Chengyang Guo, Wenjing Gu, Pengli Huang, Xike Xu, Qun Wang, Weidong Zhang
 
 
-# STEP1 Data processing
+# STEP1 Data preparation
 Description: Processed data of TCM-derived compound-target network and  TNBC-driven genes.
 ## input 
       TNBC-driven genes 
